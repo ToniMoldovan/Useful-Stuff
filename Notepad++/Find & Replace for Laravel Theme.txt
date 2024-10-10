@@ -1,0 +1,20 @@
+=================================
+
+Steps in Notepad++:
+
+1) Open Notepad++.
+2) Go to Search -> Replace or press Ctrl + H.
+3) Make sure the Search Mode is set to Regular expression.
+4) Enter the Find what and Replace with patterns as described above.
+	4.1. Find Pattern: `="(assets\/[^"]+)"`
+	4.2. Replace Pattern: `="{{ asset\('website/$1'\) }}"`
+
+5) Click Replace All to apply the changes.
+
+=================================
+
+Example:
+
+- Before: <img src="assets/images/gallery/blog-16.png" alt="Blog">
+
+- After: <img src="{{ asset('website/assets/images/gallery/blog-16.png') }}" alt="Blog">
